@@ -6,6 +6,9 @@ let crearSesion = document.querySelector(`.crearSesion`)
 let busqueda = document.getElementById(`searchBox`)
 let coincidencia = document.getElementById("coincidencia")
 let productosTotal = document.getElementById(`inicioMercado`)
+let btnFinalizarCompra = document.getElementById(`botonFinalizarCompra`)
+let carritoDeCompra = document.getElementById("botonCarrito")
+
 
 // Mostrar ropa completa
 
@@ -16,7 +19,7 @@ function mostrarRopa(array) {
         let nuevoDivRopa = document.createElement("div")
         nuevoDivRopa.innerHTML =
             `<div class="productos">
-    <a href="./Pages/error.html" title="${ropa.nombre}"><img src="${ropa.imagen}" alt=" buzo negra fria liviana" title=" Buzo negra fria liviana" class="ropa"></a>
+    <a title="${ropa.nombre}"><img src="${ropa.imagen}" alt=" buzo negra fria liviana" title=" Buzo negra fria liviana" class="ropa"></a>
     <h3 class="productoText">${ropa.nombre}</h3>
     <span itemprop="price">${ropa.precio}</span>
     <button class="btnCarritoEstilo" id="btnCarrito${ropa.id}">Agregar al carrito</button>
@@ -30,7 +33,7 @@ function mostrarRopa(array) {
                 className: "info",
                 duration: 2000,
                 style: {
-                    background: "linear-gradient(to right, #00b09b, #96c93d)",
+                    background: "linear-gradient(to right, #black, )",
                 }
             }).showToast();
         })
@@ -55,7 +58,6 @@ function buscarProducto(buscado, array) {
         productosTotal.innerHTML = ""
         mostrarRopa(busquedaArray)
     }
-    console.log("Ropa", busquedaArray)
 
 }
 
@@ -82,7 +84,7 @@ function agregarAlCarrito(ropa) {
 function mostrarRopaCarrito(ProductoCarrito) {
     let ropaCarrito = document.getElementById("modal-bodyCarrito")
     ropaCarrito.innerHTML = ""
-    for (let ropa of ProductoCarrito){
+    for (let ropa of ProductoCarrito) {
         let nuevoDivRopa = document.createElement("div")
         nuevoDivRopa.innerHTML =
             `<div class="productosCarrito">
@@ -104,7 +106,7 @@ function mostrarRopaCarrito(ProductoCarrito) {
 // Finalizar compra
 
 function finalizarCompra() {
-    
+
     ProductoCarrito = []
     localStorage.removeItem("carrito")
 
@@ -126,17 +128,21 @@ crearSesion.addEventListener("click", () => {
 
 btnFinalizarCompra.addEventListener("click", () => {
     finalizarCompra(ProductoCarrito)
+
     Toastify({
         text: "Compra Finalizada",
         className: "info",
         duration: 2000,
         style: {
-            background: "linear-gradient(to right, #00b09b, #96c93d)",
+            background: "linear-gradient(to right, #black, #96c93d)",
         }
-    }).showToast();
+    })
+        .showToast();
+
 })
 
-carritoDeCompra.addEventListener("click", ()=>{
+
+carritoDeCompra.addEventListener("click", () => {
     mostrarRopaCarrito(JSON.parse(localStorage.getItem("carrito")))
 })
 
