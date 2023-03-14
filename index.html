@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Envy ofrece productos innovadores, experiencias y servicios para inspirar al mundo. Entrega y devoluciones gratuitas en pedidos específicos. Sitio web oficial de Envy">
+    <meta name="keywords" content="contacto, preguntas, dudas, email,">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/estilos.css">
+    <!-- Icon -->
+    <link rel="shortcut icon" href="./Assets/imagenes/Mateosabelli-removebg-preview.png" type="image/x-icon">
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <title> Envy - Marca de Ropa </title>
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="precioEnvio">
+            <p class="envioText">Envio gratis apartir de $12000</p>
+        </div>
+
+        <div class="login">
+
+            <div class="box">
+                <input type="text" name="search" placeholder="Buscar producto" class="src" id="searchBox"
+                    autocomplete="off">
+            </div>
+            <button title="Iniciar Sesion" class="iniciarSesion" id="btnIniciarS" data-bs-toggle="modal"
+                data-bs-target="#idModalIniciarSesion">
+                <h2 class="imgLogin underline-hover">Iniciar Sesion</h2>
+            </button>
+            <div class="lineaSeparar"></div>
+            <button title="Crear Sesion" class="crearSesion">
+                <h2 class="imgLogin underline-hover">Crear Sesion</h2>
+            </button>
+            <div class="lineaSeparar"></div>
+            <button title="Carrito de compra" class="carrito " id="botonCarrito" data-bs-toggle="modal"
+                data-bs-target="#idModalCarrito"><img src="./Assets/imagenes/buy-svgrepo-com (1).svg" class="imgcart"
+                    alt="Carrito de compra" title="Carrito de compra"></button>
+        </div>
+
+
+        
+
+        <!-- Modal Iniciar sesion -->
+        <div style="background-color: transparent;" class="modal fade" id="idModalIniciarSesion" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-iniciarSesion" id="exampleModalLabel">Iniciar Sesion</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="Nombre" class="form-label">Nombre</label>
+                                <input type="text" class="form-control" id="nombreInput" aria-describedby="name" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="Apellido" class="form-label">Apellido</label>
+                                <input type="text" class="form-control" id="apellidoInput" aria-describedby="Apellido" required>
+
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="text" class="form-control" id="emailInput" aria-describedby="email" required>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="submit" id="IniciarSesionBtn" class="btn" data-bs-dismiss="modal">Iniciar
+                            Sesion</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Carrito -->
+        <div style="background-color: transparent;" class="modal fade" id="idModalCarrito" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Carrito de Compras</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="textoCarrito">
+                        <h2 class="textCarrito"> Producto</h2>
+                        </div>
+                    <div class="modal-body" id="modal-bodyCarrito">
+                        
+
+                    </div>
+                    <div class="row ml-ato">
+                        <p id="precioTotal"></p>
+                    </div>
+                    <div class="modal-footer">
+
+
+                        <button type="button" class="btn" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" data-bs-dismiss="modal" class="btn" id="botonFinalizarCompra">Finalizar Compra</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="links nav">
+
+            <div class="logo">
+
+                <a href="./index.html" title="Imagen logo"> <img src="./Assets/imagenes/Envy (2).png" class="imgLogo"
+                        alt="Imagen logo" title="Img logo"></a>
+
+            </div>
+
+
+            <ul class="nav nav-pills d-flex flex-row">
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" aria-current="page" href="./index.html" title="Incio">Inicio</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle underline-hover" href="#" title="Productos" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./Pages/remeras.html">Remeras</a></li>
+                        <li><a class="dropdown-item" href="./Pages/buzos.html">Buzos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" href="./Pages/contacto.html" title="Contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" href="./Pages/envios.html" title="Envios">Envios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" href="./Pages/faqs.html" title="Faqs">FAQs</a>
+                </li>
+            </ul>
+
+            <h1 class="paginaActual">Inicio</h1>
+        </nav>
+
+    </header>
+
+    <main class="mainProductos container">
+        <div class="TextoIndex">
+            <p>Somos una Marca de Ropa Streetwear que recien comienza con el fin de hacer ropa del estilo Oversize
+                Unisex.
+            </p>
+        </div>
+        <div id="coincidencia" class="mainMercado"></div>
+        <section class="mainMercado" id="inicioMercado">
+        </section>
+
+    </main>
+
+    <footer class="piedepagina">
+        <div class="contentfooter">
+            <img src="./Assets/imagenes/logo fondo negro.jpg" class="imgFooter" alt="Img logo" title="Img logo">
+
+
+            <ul class="menuItems2">
+
+                <li class="nav_items"><a href="./index.html" class="items2" title="Inicio">Inicio</a></li>
+                <li class="nav_items"><a href="#" class="items2" title="Productos">Productos</a></li>
+                <li class="nav_items"><a href="./Pages/contacto.html" class="items2" title="Contacto">Contacto</a></li>
+                <li class="nav_items"><a href="./Pages/envios.html" class="items2" title="Envios">Envios</a></li>
+                <li class="nav_items"><a href="./Pages/faqs.html" class="items2" title="FAQs">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="boxRedes">
+            <a href="https://www.instagram.com/envy.arg/" title="Logo instagram" target="_blank" class="itemsRedes"><img
+                    src="./Assets/imagenes/4096262.png" class="imgRedes" alt="logo instagram"
+                    title="Logo instagram"></a>
+            <a href="https://www.whatsapp.com/" title="Logo whatsapp" target="_blank" class="itemsRedes"><img
+                    src="./Assets/imagenes/icone-du-logo-whatsapp-noir.png" class="imgRedes" alt="logo whatsapp"
+                    title="Logo whatsapp"></a>
+            <a href="https://www.facebook.com/" title="Logo facebook" target="_blank" class="itemsRedes"><img
+                    src="./Assets/imagenes/20673 (1).png" class="imgRedes" alt="logo facebook"
+                    title="Logo facebook"></a>
+        </div>
+        <div class="boxDerechos">
+            <p>Copyright ENVY - 2022. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Class -->
+    <script src="./Js/class.js"></script>
+    <!-- Bootstrap -->
+    <script src="./Js/bootstrap.bundle.min.js"></script>
+    <!-- jS propio -->
+    <script src="./Js/index.js"></script>
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</body>
+
+</html>

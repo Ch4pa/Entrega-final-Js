@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aca podes ver todos las remeras que hay en nuestra marca">
+    <meta name="keywords" content="Remeras, ropa, envy, oversize, algodon 100%,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="shortcut icon" href="../Assets/imagenes/Mateosabelli-removebg-preview.png" type="image/x-icon">
+    <title>Envy - Remeras</title>
+</head>
+
+<body>
+
+
+    <header class="navbar">
+
+        <div class="precioEnvio containers-fluid">
+            <p class="envioText">Envio gratis apartir de $12000</p>
+        </div>
+
+        <div class="login">
+            <div class="box">
+                <input type="text" name="search" placeholder="Buscar producto" class="src" id="searchBox"
+                    autocomplete="off">
+            </div>
+            <button title="Iniciar Sesion" class="iniciarSesion" id="btnIniciarS" data-bs-toggle="modal"
+                data-bs-target="#idModalIniciarSesion">
+                <h2 class="imgLogin underline-hover">Iniciar Sesion</h2>
+            </button>
+            <div class="lineaSeparar"></div>
+            <button title="Crear Sesion" class="crearSesion">
+                <h2 class="imgLogin underline-hover">Crear Sesion</h2>
+            </button>
+            <div class="lineaSeparar"></div>
+            <button title="Carrito de compra" class="carrito " id="botonCarrito" data-bs-toggle="modal"
+                data-bs-target="#idModalCarrito"><img src="../Assets/imagenes/buy-svgrepo-com (1).svg" class="imgcart"
+                    alt="Carrito de compra" title="Carrito de compra"></button>
+        </div>
+
+
+        <nav class="links nav">
+
+            <div class="logo">
+
+                <a href="../index.html" title="Imagen logo"> <img src="../Assets/imagenes/Envy (2).png" class="imgLogo"
+                        alt="img-logo" title="Imagen logo"></a>
+
+            </div>
+
+            <ul class="nav nav-pills d-flex flex-row">
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" aria-current="page" href="../index.html"
+                        title="Inicio">Inicio</a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle underline-hover" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false" title="Productos">
+                        Productos
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="./remeras.html">Remeras</a></li>
+                        <li><a class="dropdown-item" href="./buzos.html">Buzos</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" href="./contacto.html" title="Contacto">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" href="./envios.html" title="Envios">Envios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link underline-hover" href="./faqs.html" title="FAQs">FAQs</a>
+                </li>
+            </ul>
+
+            <h1 class="paginaActual">Productos</h1>
+        </nav>
+
+    </header>
+    <div id="coincidencia" class="mainMercado"></div>
+    <main class="mainProductos container">
+
+        <!-- <section class="mainMercado" id="remerasMercado">
+            <div class="productos">
+                <a href="./error.html" title="remera blanca oversize 100% algodon"><img
+                        src="../Assets/imagenes/Remera1.png" class="ropa" alt="remera blanca oversize 100% algodon"
+                        title="remera blanca oversize 100% algodon"></a>
+                <h4 class="productoText">Remera LF</h4>
+                <span itemprop="price">$5000</span>
+            </div>
+            <div class="productos">
+                <a href="./error.html" title="remera negra oversize 100% algodon"><img
+                        src="../Assets/imagenes/Remera.png" class="ropa" alt="remera negra oversize 100% algodon"
+                        title="remera negra oversize 100% algodon"></a>
+                <h4 class="productoText">Remera RT</h4>
+                <span itemprop="price">$5000</span>
+            </div>
+            <div class="productos">
+                <a href="./error.html" title="remera blanca oversize 100% algodon"><img
+                        src="../Assets/imagenes/Remera3.png" class="ropa" alt="remera blanca oversize 100% algodon"
+                        title="remera blanca oversize 100% algodon"></a>
+                <h4 class="productoText">Remera ST</h4>
+                <span itemprop="price">$5000</span>
+            </div>
+            <div class="productos">
+                <a href="./error.html" title="remera negra oversize 100% algodon"><img
+                        src="../Assets/imagenes/remeraAurora-removebg-preview.png" class="ropa"
+                        alt="remera negra oversize 100% algodon" title="remera negra oversize 100% algodon"></a>
+                <h4 class="productoText">Remera WV</h4>
+                <span itemprop="price">$5000</span>
+            </div>
+            <div class="productos">
+                <a href="./error.html" title=" remera blanca oversize 100% algodon"><img
+                        src="../Assets/imagenes/BlancaEnvyCirculo.png" class="ropa"
+                        alt="remera blanca oversize 100% algodon" title=" remera blanca oversize 100% algodon"></a>
+                <h4 class="productoText">Remera NB</h4>
+                <span itemprop="price">$5000</span>
+            </div>
+            <div class="productos">
+                <a href="./error.html" title="remera negra oversize 100% algodon"><img
+                        src="../Assets/imagenes/Remera-Negra-logomedio.png" class="ropa"
+                        alt="remera negra oversize 100% algodon" title="remera negra oversize 100% algodon"></a>
+                <h4 class="productoText">Remera JK</h4>
+                <span itemprop="price">$5000</span>
+            </div>
+        </section> -->
+
+    </main>
+
+    <footer class="piedepagina containers-fluid">
+        <div class="contentfooter">
+            <img src="../Assets/imagenes/logo fondo negro.jpg" class="imgFooter" alt="img-logo" title="Imagen logo">
+
+            <ul class="menuItems2">
+
+                <li class="nav_items"><a href="../index.html" class="items2" title="Inicio">Inicio</a></li>
+                <li class="nav_items"><a href="../index.html" class="items2" title="Productos">Productos</a></li>
+                <li class="nav_items"><a href="./contacto.html" class="items2" title="Contacto">Contacto</a></li>
+                <li class="nav_items"><a href="./envios.html" class="items2" title="Envios">Envios</a></li>
+                <li class="nav_items"><a href="./faqs.html" class="items2" title="FAQs">FAQs</a></li>
+            </ul>
+        </div>
+        <div class="boxRedes">
+            <a href="https://www.instagram.com/envy.arg/" target="_blank" class="itemsRedes" title="logo instagram"><img
+                    src="../Assets/imagenes/4096262.png" class="imgRedes" alt="logo instagram" title="logo instagram">
+            </a>
+            <a href="https://www.whatsapp.com/" target="_blank" class="itemsRedes" title="logo whatsapp"><img
+                    src="../Assets/imagenes/icone-du-logo-whatsapp-noir.png" class="imgRedes" alt="logo whatsapp"
+                    title="logo whatsapp"></a>
+            <a href="https://www.facebook.com/" target="_blank" class="itemsRedes" title="logo facebook"><img
+                    src="../Assets/imagenes/20673 (1).png" class="imgRedes" alt="logo facebook"
+                    title="logo facebook"></a>
+        </div>
+        <div class="boxDerechos">
+            <p>Copyright ENVY - 2022. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Class -->
+    <script src="../Js/class.js"></script>
+    <!-- Bootstrap -->
+    <script src="../Js/bootstrap.bundle.min.js"></script>
+
+    <!-- jS propio -->
+    <script src="../Js/index.js"></script>
+
+    <!-- Sweet alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- TOASTIFY -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+</body>
+
+</html>
